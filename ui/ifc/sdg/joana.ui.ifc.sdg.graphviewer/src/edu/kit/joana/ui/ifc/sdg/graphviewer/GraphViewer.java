@@ -167,6 +167,8 @@ public final class GraphViewer {
 			if (f.exists() && f.canRead()) {
 				// open file
 				GraphViewer.getInstance().frame.getModel().openSDG(f);
+			} else {
+				System.err.println("File not found");
 			}
 		} else {
 			GraphViewer.getInstance().frame.setVisible(true);
